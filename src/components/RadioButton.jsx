@@ -1,6 +1,7 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
+import Radio from '@material-ui/core/Radio';
 
 const RadioButton = (props) => {
   const { label, name, options, ...rest } = props;
@@ -15,7 +16,7 @@ const RadioButton = (props) => {
               <React.Fragment key={option.key}>
                 <div className="radio">
                   <label htmlFor={option.value}>{option.key}</label>
-                  <input
+                  <Radio
                     type="radio"
                     id={option.value}
                     {...field}

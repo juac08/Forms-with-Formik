@@ -1,6 +1,8 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
+import Checkbox from '@material-ui/core/Checkbox';
+
 
 const CheckBox = (props) => {
   const { options, name, label, ...rest } = props;
@@ -14,7 +16,7 @@ const CheckBox = (props) => {
             return (
               <React.Fragment key={option.key}>
               <div className='radio'>
-                <input
+                <Checkbox
                   type="checkbox"
                   id={option.value}
                   {...field}

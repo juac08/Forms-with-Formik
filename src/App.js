@@ -6,8 +6,9 @@ import EnrolmentForm from "./components/EnrolmentForm";
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import Help from './components/Help'
+import Help from "./components/Help";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   return (
     <Router>

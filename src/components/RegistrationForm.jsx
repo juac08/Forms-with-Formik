@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
 import * as Yup from "yup";
+import Button from "@material-ui/core/Button";
 
 const RegistrationForm = () => {
   const select = [
@@ -80,10 +81,16 @@ const RegistrationForm = () => {
               name="phone"
               placeholder="Enter Your Phone Number"
             />
-
-            <button type="submit" disabled={!formik.isValid}>
+            <div className='btn'>
+            <Button
+              type="submit"
+              disabled={!formik.isValid}
+              variant="contained"
+              color="secondary"
+            >
               Submit
-            </button>
+            </Button>
+            </div>
           </Form>
         )}
       </Formik>

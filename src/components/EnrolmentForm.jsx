@@ -2,6 +2,8 @@ import React from "react";
 import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
 import * as Yup from "yup";
+import Button from "@material-ui/core/Button";
+
 const EnrolmentForm = () => {
   const dropDownOptions = [
     { key: "Select Framework", value: "" },
@@ -75,9 +77,16 @@ const EnrolmentForm = () => {
               label="Course Date"
               name="coursedate"
             />
-            <button type="submit" disabled={!formik.isValid}>
+            <div className='btn'>
+            <Button
+              type="submit"
+              disabled={!formik.isValid}
+              variant="contained"
+              color="secondary"
+            >
               Submit
-            </button>
+            </Button>
+            </div>
           </Form>
         )}
       </Formik>

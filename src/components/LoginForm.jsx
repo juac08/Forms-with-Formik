@@ -2,32 +2,32 @@ import React from "react";
 import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
 import * as Yup from "yup";
+import Button from "@material-ui/core/Button";
 
 const LoginForm = () => {
   const initialValues = {
     email: "",
-    password: ""
+    password: "",
   };
   const validationSchema = Yup.object({
-    email: Yup.string()
-      .email('Invalid email format')
-      .required('Required'),
-    password: Yup.string().required('Required')
-  })
+    email: Yup.string().email("Invalid email format").required("Required"),
+    password: Yup.string().required("Required"),
+  });
 
   const onSubmit = (values) => {
-    console.log('Form data', values)
-  }
+    console.log("Form data", values);
+  };
   return (
-    <div className="form-control" style={{height:'100vh'}}>
-        <h1 style={{textAlign:'center'}}>Login Form</h1>
-        <div className="underline"></div>
+    <div className="form-control" style={{ height: "100vh" }}>
+      <h1 style={{ textAlign: "center" }}>Login Form</h1>
+      <div className="underline"></div>
 
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={onSubmit}>
-        {formik => (
+        onSubmit={onSubmit}
+      >
+        {(formik) => (
           <Form>
             <FormikControl
               control="input"
@@ -43,9 +43,16 @@ const LoginForm = () => {
               name="password"
               placeholder="Enter Password"
             />
-            <button type="submit" disabled={!formik.isValid}>
+            <div className='btn'>
+            <Button
+              type="submit"
+              disabled={!formik.isValid}
+              variant="contained"
+              color="secondary"
+            >
               Submit
-            </button>
+            </Button>
+            </div>
           </Form>
         )}
       </Formik>
