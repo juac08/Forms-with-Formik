@@ -33,7 +33,7 @@ const RegistrationForm = () => {
     onSubmitProps.resetForm();
   };
   return (
-    <div className="form-control" style={{ height: "80vh" }}>
+    <div className="form-control" style={{ height: "100vh" }}>
       <h1 style={{ textAlign: "center" }}>Registration Form</h1>
       <div className="underline"></div>
 

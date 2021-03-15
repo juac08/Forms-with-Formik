@@ -34,7 +34,7 @@ const EnrolmentForm = () => {
   };
 
   return (
-    <div className="form-control" style={{ height: "80vh" }}>
+    <div className="form-control" style={{ height: "100vh" }}>
       <h1 style={{ textAlign: "center" }}>Enrolment Form</h1>
       <div className="underline"></div>
 
