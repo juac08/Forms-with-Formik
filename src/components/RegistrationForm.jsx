@@ -4,6 +4,7 @@ import FormikControl from "./FormikControl";
 import * as Yup from "yup";
 import Button from "@material-ui/core/Button";
 
+
 const RegistrationForm = () => {
   const select = [
     { key: "Phone", value: "Phone" },
@@ -34,8 +35,9 @@ const RegistrationForm = () => {
     onSubmitProps.resetForm();
   };
   return (
-    <div className="form-control" style={{ height: "100vh" }}>
-      <h1 style={{ textAlign: "center" }}>Registration Form</h1>
+    <div className='login-wrapper'>
+    <div className="form-control">
+      <h1 style={{ textAlign: "center" }}>Registration</h1>
       <div className="underline"></div>
 
       <Formik
@@ -94,6 +96,7 @@ const RegistrationForm = () => {
           </Form>
         )}
       </Formik>
+    </div>
     </div>
   );
 };

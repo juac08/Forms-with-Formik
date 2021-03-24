@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
 import * as Yup from "yup";
 import Button from "@material-ui/core/Button";
+import Image from './avatar.png'
 
 const LoginForm = () => {
   const initialValues = {
@@ -18,9 +19,12 @@ const LoginForm = () => {
     console.log("Form data", values);
   };
   return (
-    <div className="form-control" style={{ height: "100vh" }}>
-      <h1 style={{ textAlign: "center" }}>Login Form</h1>
+    <div className='login-wrapper'>
+    <div className="form-control">
+      <h1 style={{ textAlign: "center" }}>Login</h1>
+      <img src={Image} alt="i"/>
       <div className="underline"></div>
+
 
       <Formik
         initialValues={initialValues}
@@ -56,6 +60,7 @@ const LoginForm = () => {
           </Form>
         )}
       </Formik>
+    </div>
     </div>
   );
 };

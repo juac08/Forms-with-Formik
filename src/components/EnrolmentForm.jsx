@@ -4,6 +4,7 @@ import FormikControl from "./FormikControl";
 import * as Yup from "yup";
 import Button from "@material-ui/core/Button";
 
+
 const EnrolmentForm = () => {
   const dropDownOptions = [
     { key: "Select Framework", value: "" },
@@ -36,8 +37,10 @@ const EnrolmentForm = () => {
   };
 
   return (
-    <div className="form-control" style={{ height: "100vh" }}>
-      <h1 style={{ textAlign: "center" }}>Enrolment Form</h1>
+    <div className='login-wrapper'>
+
+    <div className="form-control">
+      <h1 style={{ textAlign: "center" }}>Enrolment</h1>
       <div className="underline"></div>
 
       <Formik
@@ -90,6 +93,7 @@ const EnrolmentForm = () => {
           </Form>
         )}
       </Formik>
+    </div>
     </div>
   );
 };

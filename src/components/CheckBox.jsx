@@ -7,7 +7,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 const CheckBox = (props) => {
   const { options, name, label, ...rest } = props;
   return (
-    <div className='form-control'>
+    <div>
       <label>{label}</label>
       <br />
       <Field name={name} {...rest}>

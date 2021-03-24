@@ -6,7 +6,7 @@ import Radio from '@material-ui/core/Radio';
 const RadioButton = (props) => {
   const { label, name, options, ...rest } = props;
   return (
-    <div className="form-control">
+    <div>
       <label>{label}</label>
       <br />
       <Field name={name} {...rest}>
